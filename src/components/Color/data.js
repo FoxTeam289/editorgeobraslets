@@ -1,3 +1,5 @@
+/** @format */
+
 export const data = {
   title: "Цвет",
   items: [
@@ -7,15 +9,15 @@ export const data = {
         {
           id: "type-color-1",
           value: "Серебро",
-          price: "100",
+          price: "0",
           active: true,
-          photo: 5,
+          photo: 1,
         },
         {
           id: "type-color-2",
           value: "Золото",
-          price: "200",
-          photo: 6,
+          price: "0",
+          photo: 2,
         },
       ],
     },

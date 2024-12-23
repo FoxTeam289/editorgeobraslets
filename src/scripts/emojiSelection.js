@@ -1,7 +1,13 @@
 import { addSelect } from "./addSelect";
-import { hasClass } from "./hassClass";
+import { totalSum } from "./totalSum";
 
-export const emojiSelection = ({ productsWrapper, data }) => {
+export const emojiSelection = ({
+  productsWrapper,
+  data,
+  dataPrice,
+  totalPrice,
+  priceValue,
+}) => {
   const btns = document.querySelectorAll("[data-btn-emoji]");
   const symbols = document.querySelectorAll("[data-symbol]");
 
@@ -18,8 +24,6 @@ export const emojiSelection = ({ productsWrapper, data }) => {
     if (!text) return;
 
     symbol.addEventListener("click", () => {
-      // hasClass(parent, "error") && parent.classList.remove("error");
-
       const textSymbol = symbol.textContent;
       const inputElement = text;
       const cursorStart = inputElement.selectionStart;
@@ -37,6 +41,14 @@ export const emojiSelection = ({ productsWrapper, data }) => {
 
       data[text.name] = text.value;
       addSelect({ productsWrapper: productsWrapper, data: data });
+      dataPrice[text.name] = Number(text.dataset.price);
+
+      totalSum({
+        input: text,
+        dataPrice: dataPrice,
+        totalPrice: totalPrice,
+        priceValue: priceValue,
+      });
     });
   });
 };

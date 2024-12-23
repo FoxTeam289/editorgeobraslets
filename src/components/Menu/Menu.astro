@@ -1,7 +1,7 @@
 ---
 import { data } from "./data";
 
-const { active } = Astro.props;
+const active = "geo-editor";
 const { items } = data;
 ---
 
@@ -21,9 +21,9 @@ const { items } = data;
     <div class="menu__scroll">
       <div class="menu__scroll-wrap">
         {
-          items.map(({ id, text }) => (
+          items.map(({ id, link, text }) => (
             <a
-              href={`${id}`}
+              href={link}
               class={`menu__item ${id === active ? " active" : ""}`}
               set:html={text}
             />
@@ -38,14 +38,6 @@ const { items } = data;
 
   .menu {
     background-color: #f5f5f5;
-
-    @include des {
-      padding-top: d(60);
-    }
-
-    @include mob {
-      padding-top: m(40);
-    }
 
     &__wrap {
       @include des {
@@ -63,11 +55,11 @@ const { items } = data;
       align-items: center;
 
       @include des {
-        padding: d(40) 0;
+        padding-bottom: d(40);
       }
 
       @include mob {
-        padding: m(20) 0;
+        padding: m(10) 0 m(20);
       }
 
       & a {

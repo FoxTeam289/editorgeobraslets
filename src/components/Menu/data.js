@@ -1,19 +1,25 @@
+/** @format */
+
 export const data = {
   items: [
     {
-      id: "https://astrostori.ru/braslets",
+      id: "braslets",
+      link: "https://astrostori.ru/braslets",
       text: "Стандартная коллекция",
     },
     {
-      id: "https://doubles-rust.vercel.app/",
+      id: "doubles-editor",
+      link: "https://editordoublesbraslets.vercel.app/",
       text: "Парные браслеты",
     },
     {
-      id: "https://individual-tan.vercel.app/",
+      id: "individual-editor",
+      link: "https://editorindividualbracelets.vercel.app/",
       text: "Индивидуальные браслеты",
     },
     {
-      id: "https://geo-five-eta.vercel.app/",
+      id: "geo-editor",
+      link: "https://editorgeobraslets.vercel.app/",
       text: "Гео-браслеты",
     },
   ],

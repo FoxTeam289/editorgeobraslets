@@ -1,3 +1,5 @@
+/** @format */
+
 export const data = {
   title: "Расположение координат",
   items: [
@@ -7,16 +9,16 @@ export const data = {
         {
           id: "text-outside",
           value: "Снаружи",
-          price: "10",
+          price: "0",
           active: true,
-          photo: 3,
+          photo: 0,
         },
         {
           id: "text-inside",
           value: "Внутри",
-          price: "10",
+          price: "0",
           active: false,
-          photo: 4,
+          photo: 3,
         },
       ],
     },

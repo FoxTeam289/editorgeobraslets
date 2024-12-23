@@ -4,7 +4,7 @@ import { data } from "./data";
 const { title, items } = data;
 ---
 
-<div class="type">
+<div class="type" data-el={title}>
   {title && <h2 class="type__title">{title}</h2>}
   {
     items && (

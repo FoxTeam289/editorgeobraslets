@@ -1,24 +1,18 @@
 export const imgs = [
   {
-    src: "https://static.tildacdn.com/tild3366-3235-4638-b434-316366393832/tupe-1.jpg",
-    active: true,
+    src: "https://static.tildacdn.com/tild3066-6439-4635-b138-346539616164/6.png",
+    active: true
   },
   {
-    src: "https://static.tildacdn.com/tild3530-3730-4432-b231-393131656534/type-2.jpg",
+    src: "https://static.tildacdn.com/tild6465-3432-4332-b065-613863366137/5.png"
   },
   {
-    src: "https://static.tildacdn.com/tild3265-6333-4863-b162-353033363033/location.png",
+    src: "https://static.tildacdn.com/tild3232-3533-4266-b738-363131336539/4.png"
   },
   {
-    src: "https://static.tildacdn.com/tild3535-6264-4330-a635-313661376433/color-1.jpg",
+    src: "https://static.tildacdn.com/tild3863-3835-4236-a361-333465633635/8.png"
   },
   {
-    src: "https://static.tildacdn.com/tild3061-3163-4437-a432-376566626132/text.jpg",
-  },
-  {
-    src: "https://static.tildacdn.com/tild3535-6264-4330-a635-313661376433/color-1.jpg",
-  },
-  {
-    src: "https://static.tildacdn.com/tild6233-3062-4632-a334-303735383036/color-2.jpg",
-  },
+    src: "https://static.tildacdn.com/tild3833-3566-4064-b039-633263626331/2.png"
+  }
 ];

@@ -96,7 +96,13 @@ export const main = () => {
   });
 
   searchCoords(data, productsWrapper);
-  emojiSelection({ productsWrapper: productsWrapper, data: data });
+  emojiSelection({
+    productsWrapper: productsWrapper,
+    data: data,
+    dataPrice: dataPrice,
+    totalPrice: totalPrice,
+    priceValue: priceValue,
+  });
   slider(inputs);
   addToBag({ texts: inputsText });
 };
