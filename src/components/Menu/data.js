@@ -5,7 +5,7 @@ export const data = {
       text: "Стандартная коллекция",
     },
     {
-      id: "https://individual-tan.vercel.app/",
+      id: "https://doubles-rust.vercel.app/",
       text: "Парные браслеты",
     },
     {
