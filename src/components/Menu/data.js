@@ -1,19 +1,19 @@
 export const data = {
   items: [
     {
-      id: "standard",
+      id: "https://astrostori.ru/braslets",
       text: "Стандартная коллекция",
     },
     {
-      id: "doubles",
+      id: "https://individual-tan.vercel.app/",
       text: "Парные браслеты",
     },
     {
-      id: "individual",
+      id: "https://individual-tan.vercel.app/",
       text: "Индивидуальные браслеты",
     },
     {
-      id: "geo",
+      id: "https://geo-five-eta.vercel.app/",
       text: "Гео-браслеты",
     },
   ],
