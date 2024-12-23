@@ -1,0 +1,174 @@
+---
+import { data } from "./data";
+
+const { title, items } = data;
+---
+
+<div class="color">
+  {title && <h2 class="color__title">{title}</h2>}
+  {
+    items && (
+      <div class="color__items">
+        {items.map(({ id, title, values }) => (
+          <div class="item">
+            {title && <h3 class="item__title">{title}</h3>}
+            {values && (
+              <div class="item__wrap">
+                {values.map((item) => (
+                  <div class="item__el">
+                    <input
+                      class="item__input"
+                      id={item.id}
+                      type="radio"
+                      value={item.value}
+                      name={id}
+                      data-input
+                      data-price={item.price ? item.price : 0}
+                      checked={item.active ? true : false}
+                      data-photo={item.photo}
+                    />
+                    <label class="item__label" for={item.id}>
+                      {item.value}
+                    </label>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    )
+  }
+</div>
+<style lang="scss">
+  @import "../styles/settings";
+
+  .color {
+    width: 100%;
+
+    @include des {
+      margin-bottom: d(30);
+    }
+
+    @include mob {
+      margin-bottom: m(30);
+    }
+
+    &__title {
+      color: #241f1f;
+      font-weight: 500;
+      line-height: 130%;
+
+      @include des {
+        font-size: d(18);
+        letter-spacing: d(-0.54);
+        margin-bottom: d(12);
+      }
+
+      @include mob {
+        font-size: m(15);
+        letter-spacing: m(-0.45);
+        margin-bottom: m(12);
+      }
+    }
+
+    &__items {
+      display: inline-flex;
+      flex-direction: column;
+      width: 100%;
+
+      @include des {
+        grid-gap: d(20);
+      }
+
+      @include mob {
+        grid-gap: m(15);
+      }
+    }
+  }
+
+  .item {
+    &__title {
+      color: #6b6663;
+      font-weight: 500;
+      line-height: 130%;
+
+      @include des {
+        font-size: d(15);
+        letter-spacing: d(-0.15);
+        margin-bottom: d(10);
+      }
+
+      @include mob {
+        font-size: m(10);
+        letter-spacing: m(-0.36);
+        margin-bottom: m(10);
+      }
+    }
+
+    &__wrap {
+      display: grid;
+
+      @include des {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: d(10);
+      }
+
+      @include mob {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: m(10);
+      }
+    }
+
+    &__el {
+      width: 100%;
+    }
+
+    &__input {
+      display: none;
+
+      &:checked + label {
+        border-color: #eb503e;
+      }
+    }
+
+    &__label {
+      color: #241f1f;
+      font-weight: 500;
+      line-height: 130%;
+      border-style: solid;
+      border-color: #e7e4e4;
+      background-color: #fff;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include easy(border-color);
+
+      @include des {
+        height: d(60);
+        border-radius: d(16);
+        border-width: d(1);
+
+        font-size: d(15);
+        letter-spacing: d(-0.3);
+      }
+
+      @include mob {
+        width: 100%;
+        padding: m(12) m(20);
+        border-radius: m(10);
+
+        font-size: m(12);
+        letter-spacing: m(-0.24);
+        border-width: m(1);
+      }
+
+      &:is(:hover) {
+        border-color: #eb503e;
+        cursor: pointer;
+      }
+    }
+  }
+</style>

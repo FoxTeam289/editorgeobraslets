@@ -1,0 +1,31 @@
+---
+import { data } from "./data";
+
+const { text } = data;
+---
+
+<h1 class="title">
+  {text}
+</h1>
+<style lang="scss">
+  @import "../styles/settings";
+
+  .title {
+    width: 100%;
+    color: #241f1f;
+    font-weight: 500;
+    line-height: 110%;
+
+    @include des {
+      font-size: d(40);
+      letter-spacing: d(-1.6);
+      margin-bottom: d(20);
+    }
+
+    @include mob {
+      font-size: m(18);
+      letter-spacing: m(-0.72);
+      margin-bottom: m(8);
+    }
+  }
+</style>

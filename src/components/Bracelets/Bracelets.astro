@@ -1,0 +1,69 @@
+---
+import Menu from "../Menu";
+import Title from "../Title";
+import Alert from "../Alert";
+import Type from "../Type";
+import Location from "../Location";
+import Text from "../Text";
+import Coords from "../Coords";
+import Color from "../Color";
+import Total from "../Total";
+import Photos from "../Photos";
+import T762 from "../T762";
+---
+
+<div class="bracelets">
+  <Menu active="geo" />
+  <div class="content">
+    <div class="content__wrap">
+      <T762 />
+      <Title />
+      <Alert />
+      <Photos />
+      <Type />
+      <Location />
+      <Coords />
+      <Text title="Добавить надпись снаружи" name="text-outside" />
+      <Text title="Добавить надпись внутри" name="text-inside" />
+      <Color />
+      <Total />
+    </div>
+  </div>
+</div>
+<style lang="scss">
+  @import "../styles/settings";
+
+  .bracelets {
+    width: 100%;
+  }
+
+  .content {
+    background-color: #fff;
+
+    @include des {
+      border-radius: d(60);
+      padding: d(80) 0 d(100);
+    }
+
+    @include mob {
+      border-radius: m(20);
+      padding: m(30) m(10) m(40);
+    }
+
+    &__wrap {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      @include des {
+        width: d(1200);
+        padding-right: d(660);
+        margin: 0 auto;
+      }
+
+      @include mob {
+      }
+    }
+  }
+</style>

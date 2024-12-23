@@ -1,0 +1,36 @@
+---
+import { data } from "./data";
+
+const { text } = data;
+---
+
+<div class="alert">{text}</div>
+<style lang="scss">
+  @import "../styles/settings";
+
+  .alert {
+    background: #fce6e4;
+    display: inline-flex;
+
+    color: #241f1f;
+    line-height: 110%;
+
+    @include des {
+      font-weight: 500;
+      border-radius: d(10);
+      padding: d(10) d(15);
+      font-size: d(15);
+      letter-spacing: d(-0.3);
+      margin-bottom: d(30);
+    }
+
+    @include mob {
+      font-weight: 400;
+      border-radius: m(10);
+      padding: m(10) m(15);
+      font-size: m(10);
+      letter-spacing: m(-0.2);
+      margin-bottom: m(20);
+    }
+  }
+</style>
