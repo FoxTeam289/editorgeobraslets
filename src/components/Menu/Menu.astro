@@ -23,7 +23,7 @@ const { items } = data;
         {
           items.map(({ id, text }) => (
             <a
-              href={`/${id}`}
+              href={`${id}`}
               class={`menu__item ${id === active ? " active" : ""}`}
               set:html={text}
             />
