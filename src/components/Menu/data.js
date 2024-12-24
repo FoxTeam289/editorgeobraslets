@@ -9,17 +9,17 @@ export const data = {
     },
     {
       id: "doubles-editor",
-      link: "https://editordoublesbraslets.vercel.app/",
+      link: "https://editor-doubles-braslets.vercel.app/",
       text: "Парные браслеты",
     },
     {
       id: "individual-editor",
-      link: "https://editorindividualbracelets.vercel.app/",
+      link: "https://editor-individual-bracelets.vercel.app/",
       text: "Индивидуальные браслеты",
     },
     {
       id: "geo-editor",
-      link: "https://editorgeobraslets.vercel.app/",
+      link: "https://editor-geo-braslets.vercel.app/",
       text: "Гео-браслеты",
     },
   ],
